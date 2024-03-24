@@ -1,0 +1,24 @@
+models:
+  - name: tips_per_month
+    description: ""
+    columns:
+      - name: taxi_id
+        description: Уникальный номер такси.
+        data_type: STRING
+      - name: report_month
+        description: Отчетный месяц
+        data_type: TIMESTAMP
+      - name: month_tips
+        description: Начисленные чаевые за отчетный месяц
+        data_type: FLOAT64
+  - name: get_much_tips_by_id
+    description: |
+      CTE выбирает машины с наибольшими чаевыми за отчетный месяц:
+      Переменные
+      - car_limit: количество машин для отчета
+      - start_tips_year: отчетный год
+      - start_tips_month: отчетный месяц
+    columns:
+      - name: taxi_id
+        description: Идентификатор машины
+        data_type: STRING

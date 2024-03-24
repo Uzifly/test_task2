@@ -1,0 +1,19 @@
+models:
+  - name: aggregated_tips_analytics_per_month
+    description: Модель вычисляет самые большие выплаты за месяц (start_tips_month,
+      start_tips_year) для определенного количества такси (car_limit). По этим
+      машинам рассчитываются начисление чаевых за последующие месяцы и изменение
+      начислений в % от предыдущего месяца.
+    columns:
+      - name: taxi_id
+        description: Уникальный идентификатор такси.
+        data_type: STRING
+      - name: report_month
+        description: Отчетный месяц
+        data_type: TIMESTAMP
+      - name: month_tips
+        description: Количество начисленных чаевых за отчетный месяц
+        data_type: FLOAT64
+      - name: percentage_change
+        description: Изменение начислений чаевых в % от предыдущего месяца
+        data_type: FLOAT64

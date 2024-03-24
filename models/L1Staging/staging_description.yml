@@ -1,0 +1,13 @@
+models:
+  - name: tips_view
+    description: ""
+    columns:
+      - name: taxi_id
+        description: Уникальный идентификатор такси
+        data_type: STRING
+      - name: trip_start_timestamp
+        description: Время начала поездки
+        data_type: TIMESTAMP
+      - name: tips
+        description: Количество чаевых
+        data_type: FLOAT64
